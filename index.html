@@ -6,3 +6,9 @@ title: #LoveWell
 	<h1>Welcome to #LoveWell by Dan Rose!</h1>
 	<p>Freshly tapped thoughts on life and God. <a href="/about">Read more about my life...</a></p>
 </div><!-- /.blurb -->
+<ul class="posts">
+
+	  {% for post in site.posts %}
+	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>
